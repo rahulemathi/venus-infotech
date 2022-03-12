@@ -1,0 +1,14 @@
+.about p:first-child{
+    text-align: justify;
+    line-height: 2;
+}
+
+.gallery img {
+    width: 400px;
+    height: 225px;
+    border-radius: 10px;
+}
+
+#videos iframe{
+    border-radius: 5%;
+}
