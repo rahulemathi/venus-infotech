@@ -13,6 +13,9 @@
   <link type="text/css" rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/07c3ab8054.js" crossorigin="anonymous"></script>
 </head>
 
@@ -66,16 +69,16 @@
     <div class="container-fluid" id="services">
       <div class="row d-flex justify-content-around">
         <h2 class="text-center">Services</h2>
-        <div class="card" style="width: 18rem;">
+        <div class="card my-2" style="width: 18rem;">
           <img src="./assets/images/virus.jpg" class="card-img-top" alt="virus">
           <div class="card-body">
             <h5 class="card-title">Virus / Malware / Spyware Removal:</h5>
             <p class="card-text">Spyware and viruses can be harmful to your computer and data. Be sure yours is virus
-              free and safe.</p>
+              free and safe. </br> &nbsp;</p>
             <a href="#" class="btn btn-primary rounded-pill">Enquiry Now</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <div class="card my-2" style="width: 18rem;">
           <img src="./assets/images/backup.jpg" class="card-img-top" alt="backup">
           <div class="card-body">
             <h5 class="card-title">Data Recovery / Data Backup Solutions:</h5>
@@ -84,7 +87,7 @@
             <a href="#" class="btn btn-primary rounded-pill">Enquiry Now</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <div class="card my-2" style="width: 18rem;">
           <img src="./assets/images/screen.png" class="card-img-top" alt="screen">
           <div class="card-body">
             <h5 class="card-title">LCD Repair / Replacement:</h5>
@@ -93,7 +96,7 @@
             <a href="#" class="btn btn-primary rounded-pill">Enquiry Now</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <div class="card my-2" style="width: 18rem;">
           <img src="./assets/images/upgrade.jpg" class="card-img-top" alt="upgrade">
           <div class="card-body">
             <h5 class="card-title">RAM, Video Card, and Hard Drive Upgrades:</h5>
@@ -174,7 +177,7 @@
                     computer to its optimum level.</p>
                     <div class="d-flex flex-row justify-content-center">
                       <div>
-                        <img class="rounded-circle" src="https://www.xaprb.com/media/2018/08/kitten.jpg" width="56px" height="56px">
+                        <img class="rounded-circle" src="./assets/images/female.svg" width="56px" height="56px">
                       </div>
                       <div class="ms-2 mt-2">
                         <p>Rupal  Goyal</p>
@@ -185,14 +188,27 @@
               </div>
               <div class="carousel-item">
                 <div class="col-12 text-center">
-                  <p class="text-center lead testimonial">I am very impressed with their service. They came to my home and repaired my
-                    computer to its optimum level.</p>
+                  <p class="text-center lead testimonial">I am very happy with their service. Would definitely recommend them for all types of computer repairs.</p>
                     <div class="d-flex flex-row justify-content-center">
                       <div>
-                        <img class="rounded-circle" src="https://www.xaprb.com/media/2018/08/kitten.jpg" width="56px" height="56px">
+                        <img class="rounded-circle" src="./assets/images/man.svg" width="56px" height="56px">
                       </div>
                       <div class="ms-2 mt-2">
-                        <p>Rupal  Goyal</p>
+                        <p>Rahul Khanna</p>
+                      </div>
+                    </div>
+                   
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-12 text-center">
+                  <p class="text-center lead testimonial">Was having issues with my computer. They fixed my computer in the  matter of few days.</p>
+                    <div class="d-flex flex-row justify-content-center">
+                      <div>
+                        <img class="rounded-circle" src="./assets/images/man.svg" width="56px" height="56px">
+                      </div>
+                      <div class="ms-2 mt-2">
+                        <p>Deepan Mehta</p>
                       </div>
                     </div>
                    
@@ -266,8 +282,8 @@
               <h2 class="text-captilize text-center">Subscribe to our news letter</h2>
                 <form class="mb-5" action="" method="post">
                   <div class="d-flex justify-content-center">
-                    <input class="form-control" type="email" placeholder="Enter your email">
-                    <input class="btn btn-primary" type="submit" value="Subscribe">
+                    <input id="email" class="form-control" type="email" placeholder="Enter your email" onkeyup="enable()" required>
+                    <input id="button" class="btn btn-primary submit" type="submit" value="Subscribe" disabled>
                   </div>
                 </form>
             </div>
@@ -327,6 +343,7 @@
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./assets/js/owl.carousel.min.js"></script>
   <script>
     $(document).ready(function () {
@@ -350,6 +367,26 @@
         }
       });
     });
+  </script>
+  <script>
+    $(".submit").on("click",function(){
+      Swal.fire(
+  'Good job!',
+  'You have Subscribed to News Letter',
+  'success'
+)
+    })
+  </script>
+  <script>
+    function enable(){
+    const mail = document.getElementById("email");
+
+    if(mail.value.length < 0){
+      document.getElementById("button").setAttribute(disabled,"disabled");
+    }else if(mail.value.length >1 ){
+      document.getElementById("button").removeAttribute("disabled");
+    }
+  }
   </script>
 </body>
 

@@ -3,11 +3,29 @@ html,body{
     overflow-x: hidden;
 }
 
+h1,h2,h3,h4,h5,h6,p,a{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-weight: 800;
+}
+
 h2{
     margin: 2rem 0 !important;
+    font-weight: 600;
+}
+
+h3{
+    font-weight: 500;
+}
+
+p{
+    font-size: 500;
+    color:#999;
 }
 .about p:first-child{
-    text-align: justify;
+    text-align: center;
     line-height: 2;
 }
 
@@ -61,7 +79,7 @@ input[type=number] {
 }
 
 #home .bg-image{
-    background-image: url("../images/carousel.jpg");
+    background-image: url("../images/carousel.png");
     background-size: cover;
     height: 400px;
 }
