@@ -17,7 +17,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/07c3ab8054.js" crossorigin="anonymous"></script>
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/07c8a140e021a76715c9dd933/71f650b509e3e225d52f8e03b.js");</script>
 </head>
 
 <body>
@@ -231,7 +230,7 @@
       <div id="contact" class="container-fluid">
         <div class="row">
           <h2 class="text-center">Contact Us</h2>
-          <div class="col-md-6 d-flex align-items-center flex-column ms-5">
+          <div class="col-md-6 d-flex align-items-center flex-column ms-5 contact-us">
             <div class="d-flex">
               <div class="me-3"><i class="fa-solid fa-location-dot fa-2x"></i></div>
               <div><h4>Our Office Address</h4>
@@ -299,39 +298,19 @@
           </div>
         </div>
         <footer>
-          <nav class="navbar navbar-expand-lg navbar-light bg-lightb  bg-primary">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-start me-5" id="navbarNav">
-                <ul class="navbar-nav text-uppercase">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Gallery</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Videos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Testimonials</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+         <div class="container my-3">
+           <div class="row d-flex">
+             <div class="col flex-row text-center footer">
+               <div class="col"><a href="#home">Home</a></div>
+               <div class="col"><a href="#services">Services</a></div>
+               <div class="col"><a href="#about-us">About Us</a></div>
+               <div class="col"><a href="#gallery">Gallery</a></div>
+               <div class="col"><a href="#videos">Video</a></div>
+               <div class="col"><a href="#testimonials">Tetsiomonials</a></div>
+               <div class="col"><a href="#contact">Contact Us</a></div>
+             </div>
+           </div>
+         </div>
         </footer>
   </main>
 
@@ -382,9 +361,9 @@
     function enable(){
     const mail = document.getElementById("email");
 
-    if(mail.value.length < 0){
+    if(mail.value.length <= 0){
       document.getElementById("button").setAttribute(disabled,"disabled");
-    }else if(mail.value.length >1 ){
+    }else if(mail.value.length >=3 ){
       document.getElementById("button").removeAttribute("disabled");
     }
   }

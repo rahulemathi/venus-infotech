@@ -84,9 +84,22 @@ input[type=number] {
     height: 400px;
 }
 
+.footer a{
+    text-decoration: none;
+    color: #000;
+}
+
+input::placeholder,textarea::placeholder{
+    text-align: center;
+}
+
 @media only screen and (max-width:600px){
     .testimonial{
         padding: 0 1rem;
+    }
+    
+    .contact-us{
+        margin: 0  !important;
     }
 
     #contact p{
